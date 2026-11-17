@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+{% block titulo %}Vitrine Off - Início{% endblock %}
+{% block conteudo %}
+<h1 class="titulo-pagina">Vitrine Off — Sistema de Vendas</h1>
+<div class="row g-4">
+    <div class="col-md-6 col-lg-4">
+        <section class="cartao-menu">
+            <h2>Cadastros</h2>
+            <ul>
+                <li><a href="{% url 'CadastraUsuario' %}">Cadastrar usuário</a></li>
+                <li><a href="{% url 'CadastraCliente' %}">Cadastrar cliente</a></li>
+                <li><a href="{% url 'CadastraProduto' %}">Cadastrar produto</a></li>
+                <li><a href="{% url 'CadastraVenda' %}">Registrar venda</a></li>
+            </ul>
+        </section>
+    </div>
+    <div class="col-md-6 col-lg-4">
+        <section class="cartao-menu">
+            <h2>Consultas de clientes</h2>
+            <ul>
+                <li><a href="{% url 'ConsultaClientes' %}">1. Listar todos os clientes</a></li>
+                <li><a href="{% url 'ConsultaClientePorNome' %}">2. Consultar cliente por nome</a></li>
+            </ul>
+        </section>
+    </div>
+    <div class="col-md-6 col-lg-4">
+        <section class="cartao-menu">
+            <h2>Consultas de produtos</h2>
+            <ul>
+                <li><a href="{% url 'ConsultaProdutos' %}">3. Listar todos os produtos</a></li>
+                <li><a href="{% url 'ConsultaProdutosPorCategoria' %}">4. Produtos por categoria</a></li>
+                <li><a href="{% url 'ConsultaProdutosPorPreco' %}">5. Produtos por faixa de preço</a></li>
+                <li><a href="{% url 'ConsultaEstoqueBaixo' %}">10. Produtos com estoque baixo</a></li>
+            </ul>
+        </section>
+    </div>
+    <div class="col-md-6 col-lg-4">
+        <section class="cartao-menu">
+            <h2>Consultas de vendas</h2>
+            <ul>
+                <li><a href="{% url 'ConsultaVendas' %}">6. Listar todas as vendas</a></li>
+                <li><a href="{% url 'ConsultaVendasPorCliente' %}">7. Vendas por cliente</a></li>
+                <li><a href="{% url 'ConsultaVendasPorPeriodo' %}">8. Vendas por período</a></li>
+                <li>9. Itens de uma venda <small class="text-muted">(link "Ver itens" na lista de vendas)</small></li>
+            </ul>
+        </section>
+    </div>
+</div>
+{% endblock %}
