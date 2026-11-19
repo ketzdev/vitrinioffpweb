@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% load bootstrap5 %}
+{% block titulo %}Consultar Vendas por Cliente{% endblock %}
+{% block conteudo %}
+<h1 class="titulo-pagina">Consultar Vendas por Cliente</h1>
+<form method="get" class="painel-busca">
+    {% bootstrap_form form %}
+    <button type="submit" class="btn btn-primary">Pesquisar</button>
+</form>
+{% if buscou %}
+<h2 class="h4">Vendas de {{ cliente.nome }}</h2>
+{% include '_tabela_vendas.html' %}
+{% endif %}
+{% endblock %}

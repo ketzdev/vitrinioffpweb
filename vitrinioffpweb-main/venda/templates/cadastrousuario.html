@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% load bootstrap5 %}
+{% block titulo %}Cadastro de Usuário{% endblock %}
+{% block conteudo %}
+<div class="cadastro-container">
+    <section class="cadastro-card">
+        <div class="cadastro-header"><h1>Cadastro de Usuário</h1></div>
+        <form action="{% url 'CadastraUsuario' %}" method="POST" class="form" enctype="multipart/form-data">
+            {% csrf_token %}
+            {% bootstrap_form form %}
+            <button type="submit" class="btn btn-primary">Cadastrar usuário</button>
+            <a href="{% url 'index' %}" class="btn btn-secondary">Voltar</a>
+        </form>
+    </section>
+</div>
+{% endblock %}

@@ -1,0 +1,7 @@
+{% extends 'base.html' %}
+{% block titulo %}Lista de Vendas{% endblock %}
+{% block conteudo %}
+<h1 class="titulo-pagina">Lista de Vendas</h1>
+<p><a class="btn btn-primary" href="{% url 'CadastraVenda' %}">+ Nova venda</a></p>
+{% include '_tabela_vendas.html' %}
+{% endblock %}
