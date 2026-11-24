@@ -54,7 +54,7 @@ def CadastraProduto(request):
 
 
 def _calcula_total(venda, extra=Decimal('0.00')):
-    """Soma dos itens (+ extra) com o desconto percentual da venda aplicado."""
+    #Soma dos itens (+ extra) com o desconto percentual da venda aplicado.
     subtotal = sum((i.quantidade_Item * i.preco_unitario for i in venda.Item_vendido.all()), Decimal('0.00'))
     subtotal += extra
     return (subtotal * (100 - Decimal(venda.desconto)) / 100).quantize(Decimal('0.01'))
