@@ -1,33 +1,20 @@
-/* =====================================================
-   VITRINE OFF - estilo.css
-   Paleta: terracota, vinho e bege
-   Este arquivo é carregado DEPOIS do Bootstrap,
-   por isso ele consegue sobrescrever o visual padrão.
-   ===================================================== */
-
-
-/* ---------- 1. CORES (mude aqui e o site inteiro muda) ---------- */
 :root {
-    --bege-claro: #f7f0e6;    /* fundo da página */
-    --bege: #ecdfcd;          /* bordas e detalhes suaves */
-    --branco-quente: #fffaf3; /* fundo de cartões e tabelas */
-    --terracota: #c4694a;     /* botões e destaques */
+    --bege-claro: #f7f0e6;    
+    --bege: #ecdfcd;          
+    --branco-quente: #fffaf3; 
+    --terracota: #c4694a;     
     --terracota-escuro: #a8523a;
-    --vinho: #6e1f2f;         /* menu, títulos e rodapé */
+    --vinho: #6e1f2f;         
     --vinho-escuro: #4a1420;
-    --texto: #3b2a26;         /* texto corrido */
-    --texto-suave: #8a746b;   /* textos secundários */
+    --texto: #3b2a26;        
+    --texto-suave: #8a746b;   
 }
 
-
-/* ---------- 2. BASE DA PÁGINA ---------- */
 body {
     background-color: var(--bege-claro);
     color: var(--texto);
     font-family: "Segoe UI", Roboto, Arial, sans-serif;
     line-height: 1.6;
-
-    /* faz o rodapé ficar sempre no fim da tela */
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -41,13 +28,10 @@ a:hover {
     color: var(--vinho);
 }
 
-/* sobrescreve o cinza padrão do Bootstrap */
 .text-muted {
     color: var(--texto-suave) !important;
 }
 
-
-/* ---------- 3. TOPO / MENU ---------- */
 .topo {
     background-color: var(--vinho);
     border-bottom: 4px solid var(--terracota);
@@ -71,11 +55,8 @@ a:hover {
     color: #ffffff;
 }
 
-
-/* ---------- 4. CONTEÚDO E RODAPÉ ---------- */
 .conteudo {
-    flex: 1; /* ocupa o espaço que sobra e empurra o rodapé para baixo */
-    width: 100%;
+    flex: 1; 
     max-width: 1100px;
     margin: 0 auto;
     padding: 40px 20px;
@@ -89,8 +70,6 @@ a:hover {
     font-size: 0.9rem;
 }
 
-
-/* ---------- 5. TÍTULOS ---------- */
 .titulo-pagina {
     color: var(--vinho);
     font-size: 1.9rem;
@@ -106,14 +85,12 @@ h2.h4 {
 }
 
 
-/* ---------- 6. BOTÕES ---------- */
 .btn {
     border-radius: 8px;
     padding: 8px 20px;
     font-weight: 500;
 }
 
-/* botão principal: terracota */
 .btn-primary {
     --bs-btn-bg: var(--terracota);
     --bs-btn-border-color: var(--terracota);
@@ -124,7 +101,6 @@ h2.h4 {
     --bs-btn-focus-shadow-rgb: 196, 105, 74;
 }
 
-/* botão secundário (Voltar): contorno vinho */
 .btn-secondary {
     --bs-btn-color: var(--vinho);
     --bs-btn-bg: transparent;
@@ -136,8 +112,6 @@ h2.h4 {
     --bs-btn-active-border-color: var(--vinho-escuro);
 }
 
-
-/* ---------- 7. CARTÕES DO MENU (página inicial) ---------- */
 .cartao-menu {
     background-color: var(--branco-quente);
     border: 1px solid var(--bege);
@@ -183,8 +157,6 @@ h2.h4 {
     text-decoration: underline;
 }
 
-
-/* ---------- 8. FORMULÁRIOS DE CADASTRO ---------- */
 .cadastro-container {
     display: flex;
     justify-content: center;
@@ -212,7 +184,6 @@ h2.h4 {
     margin: 0;
 }
 
-/* campos (inputs, selects, etc.) */
 .form-label {
     color: var(--vinho);
     font-weight: 500;
@@ -237,7 +208,6 @@ h2.h4 {
 }
 
 
-/* ---------- 9. PAINEL DE BUSCA (páginas de consulta) ---------- */
 .painel-busca {
     background-color: var(--branco-quente);
     border: 1px solid var(--bege);
@@ -249,7 +219,6 @@ h2.h4 {
 }
 
 
-/* ---------- 10. TABELAS ---------- */
 .tabela-vitrine {
     --bs-table-bg: var(--branco-quente);
     --bs-table-striped-bg: #f6ebdc;
@@ -274,7 +243,6 @@ h2.h4 {
 }
 
 
-/* ---------- 11. MENSAGENS DE AVISO (sucesso, erro...) ---------- */
 .alert {
     border-radius: 8px;
 }
@@ -293,7 +261,7 @@ h2.h4 {
 }
 
 
-/* ---------- 12. CELULAR ---------- */
+
 @media (max-width: 576px) {
     .conteudo {
         padding: 25px 15px;
