@@ -192,8 +192,13 @@ def ConsultaVendasPorPeriodo(request):
     return render(request, 'consultavendasporperiodo.html', context)
 
 
-#consultar itens de uma venda
+# Consultar itens de uma venda
 def ConsultaItensVenda(request, venda_id):
-    venda = get_object_or_404(Venda.objects.select_related('cliente_cpf'), pk=venda_id)
-    itens = Item_Venda.objects.filter(venda=venda).select_related('produto').order_by('id')
-    return render(request, 'consultaitensvenda.html', {'venda': venda, 'itens': itens})
+    venda = get_object_or_404(Venda, pk=venda_id)
+    itens = Item_Venda.objects.filter(
+        venda=venda
+    ).select_related('produto')
+    return render(request, 'consultaitensvenda.html', {
+        'venda': venda,
+        'itens': itens
+    })

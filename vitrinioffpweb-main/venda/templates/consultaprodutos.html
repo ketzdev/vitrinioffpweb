@@ -1,7 +1,0 @@
-{% extends 'base.html' %}
-{% block titulo %}Lista de Produtos{% endblock %}
-{% block conteudo %}
-<h1 class="titulo-pagina">Lista de Produtos</h1>
-<p><a class="btn btn-primary" href="{% url 'CadastraProduto' %}">+ Novo produto</a></p>
-{% include '_tabela_produtos.html' %}
-{% endblock %}
